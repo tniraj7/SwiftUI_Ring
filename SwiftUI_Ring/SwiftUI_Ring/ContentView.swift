@@ -2,14 +2,17 @@ import SwiftUI
 
 struct ContentView: View {
     
-    var color1 = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
-    var color2 = #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1)
-    var width: CGFloat = 88
-    var height: CGFloat = 88
-    var percentage = 88
+    var color1 = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
+    var color2 = #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)
+    var color3 = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
+    var color4 = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+    var width: CGFloat = 200
+    var height: CGFloat = 200
+    var percent: CGFloat = 60
     
     var body: some View {
         let multiplier = width / 44
+        let progress = 1 - (percent / 100)
         
         return ZStack {
             Circle()
@@ -23,7 +26,7 @@ struct ContentView: View {
                 .trim(from: 0.2, to: 1)
                 .stroke(
                     LinearGradient(
-                        gradient: Gradient(colors: [Color(color1), Color(color2)]),
+                        gradient: Gradient(colors: [Color(color1), Color(color2), Color(color3), Color(color4)]),
                         startPoint: .topTrailing,
                         endPoint: .bottomLeading),
                     style: StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round, miterLimit: .infinity, dash: [20,0], dashPhase: 0))
