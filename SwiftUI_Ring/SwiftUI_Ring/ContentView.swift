@@ -29,11 +29,11 @@ struct ContentView: View {
                         gradient: Gradient(colors: [Color(color1), Color(color2), Color(color3), Color(color4)]),
                         startPoint: .topTrailing,
                         endPoint: .bottomLeading),
-                    style: StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round, miterLimit: .infinity, dash: [20,0], dashPhase: 0))
+                    style: StrokeStyle(lineWidth: 5 * multiplier, lineCap: .round, lineJoin: .round, miterLimit: .infinity, dash: [20,0], dashPhase: 0))
                 .rotationEffect(Angle(degrees: 90))
                 .rotation3DEffect(Angle(degrees: 180), axis: (x: 1, y: 0, z: 0))
                 .frame(width: width, height: height)
-                .shadow(color: Color(color2).opacity(0.1), radius: 3, x: 0, y: 3)
+                .shadow(color: Color(color2).opacity(0.3), radius: 3 * multiplier, x: 0, y: 3 * multiplier)
             
             Text("82%")
                 .font(.subheadline)
