@@ -23,7 +23,7 @@ struct ContentView: View {
                 .frame(width: width, height: height)
             
             Circle()
-                .trim(from: 0.2, to: 1)
+                .trim(from: progress, to: 1)
                 .stroke(
                     LinearGradient(
                         gradient: Gradient(colors: [Color(color1), Color(color2), Color(color3), Color(color4)]),
