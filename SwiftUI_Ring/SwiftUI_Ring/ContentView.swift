@@ -35,8 +35,8 @@ struct ContentView: View {
                 .frame(width: width, height: height)
                 .shadow(color: Color(color2).opacity(0.3), radius: 3 * multiplier, x: 0, y: 3 * multiplier)
             
-            Text("82%")
-                .font(.subheadline)
+            Text("\(Int(percent))%")
+                .font(.system(size: 14 * multiplier))
                 .fontWeight(.bold)
             
         }
